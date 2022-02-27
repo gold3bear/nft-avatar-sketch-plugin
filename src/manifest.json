@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "icon.png",
+  "commands": [
+    {
+      "name": "随机替换选中元素",
+      "identifier": "nft-avatar.random-symbol-replace",
+      "script": "./random-symbol-replace.js"
+    }
+  ],
+  "menu": {
+    "title": "nft-avatar",
+    "items": [
+      "nft-avatar.random-symbol-replace"
+    ]
+  }
+}
