@@ -9,7 +9,7 @@
     }
   ],
   "menu": {
-    "title": "nft-avatar",
+    "title": "NFT头像生成器",
     "items": [
       "nft-avatar.random-symbol-replace"
     ]
