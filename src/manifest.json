@@ -6,12 +6,18 @@
       "name": "随机替换选中元素",
       "identifier": "nft-avatar.random-symbol-replace",
       "script": "./random-symbol-replace.js"
+    },
+   {
+      "name": "批量生成画布",
+      "identifier": "nft-avatar.artboard-random-generate",
+      "script": "./artboard-random-generate.js"
     }
   ],
   "menu": {
     "title": "NFT头像生成器",
     "items": [
-      "nft-avatar.random-symbol-replace"
+      "nft-avatar.random-symbol-replace",
+      "nft-avatar.artboard-random-generate"
     ]
   }
 }
