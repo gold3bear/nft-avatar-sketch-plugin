@@ -29,13 +29,15 @@ export function getRandomSymbol (symbols) {
 export function symbolsReplace (collections) {
   // 处理选中的控件
   const collectionsCount = collections.length
+  if(!Array.isArray(collections)) return;
   if (collectionsCount === 0) return;
-
-  collections.forEach(function (symbolObj, i) {
+  const symbolMasters = [];
+  for (const symbolObj of collections) {
     //判断选择类型，如果是symbol则直接替换, 如果是Layer是画板 则替换画板内的symbol
     if (symbolObj.type === 'Artboard' || symbolObj.type === 'Group') {
       const { layers } = symbolObj
-      return symbolsReplace(layers)
+      symbolsReplace(layers);
+      continue;
     }
     if (symbolObj.type === 'SymbolInstance') {
       //找到组件原生体 symbolMaster
@@ -56,14 +58,17 @@ export function symbolsReplace (collections) {
       const { length } = siblingSymbols;
       if (length > 0) {
         const symbolToReplace = getRandomSymbol(siblingSymbols);
-        return symbolObj.symbolId = symbolToReplace.symbolId
+        symbolObj.symbolId = symbolToReplace.symbolId
+        symbolMasters.push(symbolToReplace);
       } else {
-        console.log(`该${pathName}下只有1个${lastName}控件，无法连续替换`)
+        // console.log(`该${pathName}下只有1个${lastName}控件，无法连续替换`)
       }
     }
 
-  })
+  }
 
+  return symbolMasters;
+  
 }
 
 export default {

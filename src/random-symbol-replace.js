@@ -13,7 +13,7 @@ export default function () {
   if (selectedCount === 0) {
     return sketch.UI.message("请选择控件或者含有控件的画板")
   } else {
-    return symbolsReplace(selectedLayers)
+    symbolsReplace(selectedLayers.layers)
   }
 
 }
