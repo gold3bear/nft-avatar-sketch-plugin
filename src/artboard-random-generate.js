@@ -52,7 +52,7 @@ export default function () {
 
   //设置生成个数
   let generateCount = 10;
-  UI.getInputFromUser("请填写你要生成的个数",
+  UI.getInputFromUser("您需要生成多少画布？（建议不超过1000）",
     { initialValue: generateCount },
     (err, generateCount) => {
       if (err) return;

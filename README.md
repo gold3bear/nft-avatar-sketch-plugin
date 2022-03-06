@@ -1,4 +1,28 @@
-# nft-avatar
+# NFT头像生成SKetch插件 ｜ NFT Avatar generate sketch plugin 
+
+## 插件使用
+下载：
+* [nft-avatar.sketchplugin](./example/nft-avatar.sketchplugin.zip) 
+* [示例sketch文件](./example/cc.sketch)
+
+![使用效果](./example/recording.gif)
+
+将画板(Artboard)上面所有控件(Symbol)按照路径命名（用`/`分割）的方式进行分组，如`m/01`，程序会根据分组进行替换控件。如下图：
+
+![控件命名](./example/WX20220306-161220.png)
+
+在画板中组合好控件，就可以使用了。
+
+### 高级用法
+如果是稀缺控件可以在名字后面跟上`@概率`，如`m/0@0.5`，可以让该控件相对于同组叠加0.5的稀有度。
+
+![控件命名](./example/WX20220306-161918.png)
+
+
+## 插件开发
+
+
+
 
 ## Installation
 
